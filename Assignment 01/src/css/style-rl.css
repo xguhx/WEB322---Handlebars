@@ -1,0 +1,265 @@
+/*font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;*/
+
+/* RESET */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  color: #f1efef;
+}
+
+body {
+  font-family: "Open Sans", "Roboto", sans-serif;
+  font-size: 1.2em;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+.header-home {
+  height: 30em;
+  width: 100%;
+  margin: 0;
+  background-image: url("../assets/bg/artem-kostenko-a6EzvPjXfBY-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+  padding: 50px;
+  /* overflow: hidden; */
+}
+
+.logo {
+  float: left;
+  max-width: 50%;
+  padding: 0;
+}
+
+.header-hero {
+  display: flex;
+  /* flex-direction: row;
+    justify-content: end; */
+}
+
+header h1 {
+  position: relative;
+  top: 3em;
+  left: -1em;
+  font-family: "Open Sans", cursive;
+  font-size: 4em;
+  margin: 0;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+header p {
+  position: relative;
+  top: 8em;
+  left: 4em;
+  font-family: "Roboto", cursive;
+  font-size: 1.5em;
+  margin: 0;
+  margin-top: 5px;
+  display: block;
+}
+
+header nav {
+  float: right;
+  margin-right: 40px;
+  padding-right: 50px;
+}
+
+header nav ul {
+  margin: 0;
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+header nav ul li a {
+  color: #f1efef;
+}
+
+/*  BANNER */
+
+.room-listing {
+  padding-right: 300px;
+  height: 680px;
+  display: flex;
+  justify-content: center;
+}
+
+.room-listing h2 {
+  color: #000000;
+  padding: 20px;
+  margin: 0;
+}
+.room-listing h2 {
+  font-size: 2em;
+  max-width: 70px;
+  margin-left: 100px;
+  margin-right: 0;
+}
+
+.rl-images-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  grid-template-rows: repeat(3, 180px);
+  grid-gap: 6em 3em;
+  padding-left: 100px;
+  padding-top: 50px;
+}
+.card {
+  padding: 10px;
+  height: 250px;
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card h4 {
+  font-size: 0.8em;
+  color: #000;
+}
+.card p {
+  font-size: 0.8;
+  color: rgb(0, 0, 0);
+}
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  height: 150px;
+  background-color: #000000;
+  display: inline-flex;
+  justify-content: space-evenly;
+  color: #ffffff;
+  padding: 50px;
+}
+
+.footer-nav {
+  float: right;
+  margin: 70px 40px 0 300px;
+  padding-right: 50px;
+}
+
+.footer-nav ul {
+  margin: 0;
+  list-style: none;
+}
+
+.footer-nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.footer-nav ul li a {
+  color: #ffffff;
+}
+
+.footer-logo img {
+  padding-top: 50px;
+  width: 120px;
+  height: 100px;
+}
+.social-media {
+  display: inline;
+
+  margin: 0 300px 0px 0px;
+}
+
+.social-media h2 {
+  font-family: "Open Sans";
+  font-size: 2em;
+  padding-left: 100px;
+  padding-bottom: 20px;
+}
+.social-media a img {
+  padding-top: 20px;
+  padding-left: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 3em;
+  }
+}
