@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!-- SCRIPT, META, LINK (JS, CSS) -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="utf-8" />
+    <title>Looking for a place to stay? - Earthbnb</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header-home">
+        <div section="header-top">
+          <div class="logo">
+            <a href="/"
+              ><img alt="white-logo" src="../assets/logo/white-logo_small2.PNG"
+            /></a>
+          </div>
+          <div class="nav-reg">
+            <nav>
+              <ul>
+                <li><a href="/home"> Home </a></li>
+                <li><a href="/registration"> User Registration</a></li>
+                <li><a href="/login"> Log in</a></li>
+              </ul>
+            </nav>
+            <div class="registration"></div>
+          </div>
+        </div>
+
+        <div section="header-hero">
+          <div class="hero-intro">
+            <h1>Go As Far As You Want To</h1>
+            <p>With Earthbnb you can set the pace of your own experience!</p>
+          </div>
+        </div>
+
+        <div class="booking-form">
+          <h2>Where do you want to stay?</h2>
+          <form action="/rooms">
+            <div class="form-city">
+              <label for="places">PLACE:</label>
+              <select id="places" name="place">
+                <option value="" disabled selected hidden>
+                  Choose a City...
+                </option>
+                <option value="Toronto">Toronto</option>
+                <option value="Vancouver">Vancouver</option>
+                <option value="Quebec City">Quebec City</option>
+                <option value="Ottawa">Ottawa</option>
+              </select>
+            </div>
+
+            <div class="form-guests">
+              <label for="guests">GUESTS:</label>
+              <select id="guests" name="guests">
+                <option value="1">1 guest</option>
+                <option value="2">2 guests</option>
+                <option value="3">3 guests</option>
+                <option value="4">4 guests</option>
+              </select>
+            </div>
+
+            <div class="form-check-in">
+              <label for="check-in">CHECK-IN:</label>
+
+              <input
+                type="date"
+                id="check-in"
+                name="check-in"
+                value="2020-09-19"
+                min="2020-09-19"
+                max="2021-12-31"
+              />
+            </div>
+
+            <div class="form-check-out">
+              <label for="check-out">CHECK-OUT:</label>
+
+              <input
+                type="date"
+                id="check-out"
+                name="check-out"
+                value="2020-09-19"
+                min="2020-09-19"
+                max="2022-12-31"
+              />
+            </div>
+
+            <input type="submit" value="Let's Go!" />
+          </form>
+        </div>
+      </header>
+
+      <main>
+        <div class="promo-banner">
+          <h2>BLACK FRIDAY!</h2>
+
+          <div class="promo-images">
+            <a href="/roomdetail"><img src="../assets/banner/Alaska.PNG" /></a>
+            <a href="/roomdetail"><img src="../assets/banner/Florida.PNG" /></a>
+            <a href="/roomdetail"><img src="../assets/banner/Norway.PNG" /></a>
+          </div>
+          <p>Enjoy special prices for the weekend!</p>
+        </div>
+        <div class="main-info">
+          <h2>About Us</h2>
+
+          <div class="main-info-img">
+            <!-- <img src="assets/aboutus/saiph-muhammad-JLNiQNntX4s-unsplash_holding hands.jpg" alt="holding-hands"> -->
+            <img
+              src="../assets/aboutus/allef-vinicius-onGipw1rkPU-unsplash_dance.jpg"
+              alt="dance"
+            />
+            <!-- <img src="../assets/logo/airbnb-white-large.PNG" alt="logo" /> -->
+            <img
+              src="../assets/aboutus/xavier-mouton-photographie-MRWHSKimBJk-unsplash_hug.jpg"
+              alt="hug"
+            />
+          </div>
+
+          <div class="main-info-text">
+            Earthbnb is the bnb website that you are looking for! We have our
+            values set in making your experience the best of your life. For that
+            to happen, we ensure to have a full team taking care of each
+            customer and each owner.
+          </div>
+
+          <div class="main-info-video">
+            <div class="main-info-video-container">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/BHACKCNDMW8"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <!-- <video width="480" height="272" controls>
+                <source src="https://www.youtube.com/embed/BHACKCNDMW8" type="video/mp4" />
+                <source src="https://www.youtube.com/embed/BHACKCNDMW8" type="video/ogg" />
+                Your browser does not support the video tag.
+              </video> -->
+            </div>
+            <div class="main-info-text-2">
+              <p>
+                Earthbnb is the go to bnb if you are looking for the best
+                quality, price and experience. Check out the video reviews of
+                our customers and take your own conclusions!
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="footer">
+          <div class="footer-nav">
+            <ul>
+              <li><a href="/home"> Home </a></li>
+              <li><a href="/registration"> User Registration</a></li>
+              <li><a href="/login"> Log in</a></li>
+            </ul>
+          </div>
+
+          <div class="social-media">
+            <h2>Contact Us!</h2>
+            <a href="/socialmedia"
+              ><img
+                style="width: 25px"
+                src="../assets/icons/facebook-black.svg"
+            /></a>
+            <a href="/socialmedia"
+              ><img src="../assets/icons/twitter-black.svg"
+            /></a>
+            <a href="/socialmedia"
+              ><img src="../assets/icons/instagram-black.svg"
+            /></a>
+            <a href="/socialmedia"
+              ><img src="../assets/icons/email-black.svg"
+            /></a>
+          </div>
+
+          <div class="footer-logo">
+            <img src="../assets/logo/black-logo.png" />
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
