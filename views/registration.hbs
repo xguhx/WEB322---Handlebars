@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- SCRIPT, META, LINK (JS, CSS) -->
+     <!-- SCRIPT, META, LINK (JS, CSS) -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+   <!-- MY CSS -->
+   <link rel="stylesheet" href="../css/style-reg.css" />
+   <!-- GOOGLE FONTS -->
+   <link
+     href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap"
+     rel="stylesheet"
+   />
+   <!-- BOOSTRAP -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Looking for a place to stay? - Earthbnb</title>
+  </head>
+  <body>
+    <div class="container.fluid p-0">
+      <header class="header-home">
+        {{> header}}
+
+        <div class="ref-position">
+          <div class="reg-form mx-auto text-center">
+            <h2>Sign in</h2>
+            <form method="post" action="/dashboard" enctype="application/x-www-form-urlencoded" >
+              <div class="form-email">
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your email here"
+                  required
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  size="25"
+                  title="Ex: JhonDoe@email.com"
+                  class="form-control"
+                />
+              </div>
+
+              {{!-- <div class="form-pwd">
+                <label for="password">:</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Your password here"
+                  required
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                  size="25"
+                   title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+                  class="form-control"
+                />
+              </div> --}}
+
+                <div class="form-pwd">
+                <label for="password">Password:</label>
+                <input
+                  
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Your password here"
+                  required
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                  class="form-control "
+                   title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+                />
+              </div>
+
+              <div class="form-renter-owner">
+                <label for="renter-owner">Renter or Owner:</label>
+                <select id="renter-owner" name="renter-owner" required class="form-control">
+                  <option value="" disabled selected hidden>
+                    What are you?
+                  </option>
+                  <option value="Renter">Renter</option>
+                  <option value="Owner">Owner</option>
+                </select>
+              </div>
+
+              <div class="form-fname">
+                <label for="fname">First name:</label>
+                <input
+                   {{!-- size="20" --}}
+                  type="text"
+                  id="fname"
+                  name="fname"
+                  placeholder="Your first name"
+                  required
+                  pattern="[^0-9]+"
+                  title="Only letters allowed"
+                  class="form-control"
+                />
+              </div>
+
+              <div class="form-lname">
+                <label for="lname">Last name:</label>
+                <input
+                  type="text"
+                  id="lname"
+                  name="lname"
+                  placeholder="Your last name"
+                  required
+                  {{!-- size="20" --}}
+                  pattern="[^0-9]+"
+                  title="Only letters allowed"
+                  class="form-control"
+                />
+              </div>
+
+              <div class="form-birthday">
+                <label for="form-birthday">Birthday:</label>
+
+                <input
+                  type="date"
+                  id="birthday"
+                  name="birthday"
+                  value="2020-09-19"
+                  min="1940-01-01"
+                  max=""
+                  required
+                  class="form-control"
+                />
+              </div>
+
+            
+
+              <input type="submit" value="Register!"/>
+            </form>
+          </div>
+        </div>
+      </header>
+
+     {{> blackfooter}}
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"
+  ></script>
+  </body>
+</html>
