@@ -119,7 +119,7 @@ header h1 {
   margin: 0;
   margin-top: 5px;
   display: inline-block;
-  color:#fff;
+  color: #fff;
 }
 
 header p {
@@ -131,7 +131,7 @@ header p {
   margin: 0;
   margin-top: 5px;
   display: block;
-  color:#fff;
+  color: #fff;
 }
 
 header nav {
@@ -176,14 +176,13 @@ header nav ul li a {
 }
 
 .rl-images-grid {
-
   grid-gap: 6em 3em;
   padding-left: 4em;
   padding-top: 2em;
 }
 .mycard {
   /* padding: 10px; */
-  height: 270px;
+  height: 320px;
   width: 270px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
@@ -281,23 +280,91 @@ header nav ul li a {
   width: 120px;
   margin: auto;
 }
- @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .rl-images-grid {
-
     grid-gap: 6em 3em;
     padding-left: 1em;
     padding-top: 1em;
   }
 
-  
-header h1 {
-  font-size: 2em;
+  header h1 {
+    font-size: 2em;
+  }
+
+  header p {
+    font-size: 0.7em;
+  }
 }
 
-header p {
-  font-size: 0.7em;
- 
+/* ------------------------- */
+
+.booking-form {
+  color: #000000;
+  display: inline-block;
+  float: left;
+  height: 5em;
+  width: 15em;
+  margin: 2em;
+  /* background-color: rgb(241, 239, 239, 0.9);
+  border-radius: 30px;
+  margin: 2em; */
+}
+/* 
+.booking-form h2 {
+  padding-top: 10px;
+  padding-left: 60px;
+  margin-bottom: 10px;
 }
 
+input[type="submit"] {
+  padding: 13px 10px 10px 10px;
+  margin-top: 15px;
+  color: #fff;
+  background-color: #135a28;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 3px;
+  width: 100%;
+  border: 1px solid #2b633c;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
 
- } 
+select,
+input[type="date"] {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+label {
+  justify-content: center;
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.form-city,
+.form-check-in,
+.form-check-out,
+.form-guests {
+  padding-left: 1em;
+  display: inline-block;
+}
+
+.form-check-in {
+  padding-top: 10px;
+}
+
+.form-check-out {
+  padding-top: 10px;
+}
+
+.form-guests {
+  padding-left: 1em;
+} */
+
+.test {
+  display: flex;
+}

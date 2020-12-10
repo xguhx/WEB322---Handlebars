@@ -137,14 +137,12 @@ header nav ul li a {
   width: 20em;
   background-color: rgb(241, 239, 239, 0.9);
   border-radius: 30px;
-  margin-top:2em;
+  margin-top: 2em;
 }
 
-
-
-@media (max-width:659px) {
-  .reg-form{
-    margin-top:7em;
+@media (max-width: 659px) {
+  .reg-form {
+    margin-top: 7em;
     height: 37em;
   }
 }
@@ -186,8 +184,7 @@ label {
 .form-fname,
 .form-renter-owner,
 .form-lname,
-.form-birthday
-.form-pwd {
+.form-birthday .form-pwd {
   display: inline-block;
 }
 
@@ -258,14 +255,12 @@ label {
   margin: auto;
 }
 
-
 @media (max-width: 569px) {
-  html{
-    font-size:0.9em;
+  html {
+    font-size: 0.9em;
   }
 
-  .header-home{
+  .header-home {
     padding: 1em;
   }
-  }
-  
+}

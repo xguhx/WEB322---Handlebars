@@ -98,8 +98,6 @@ body {
   /* overflow: hidden; */
 }
 
-
-
 .logo {
   float: left;
   max-width: 50%;
@@ -132,7 +130,7 @@ header nav ul li a {
 }
 
 .login-form {
- margin-top:10em;
+  margin-top: 10em;
   color: #000000;
   display: block;
   justify-content: center;
@@ -141,7 +139,6 @@ header nav ul li a {
   min-width: 20em;
   background-color: rgb(241, 239, 239, 0.9);
   border-radius: 30px;
-
 }
 
 .login-form h2 {
@@ -251,14 +248,12 @@ label {
   margin: auto;
 }
 
-
 @media (max-width: 569px) {
-  html{
-    font-size:0.9em;
+  html {
+    font-size: 0.9em;
   }
 
-  .header-home{
+  .header-home {
     padding: 1em;
   }
-  }
-  
+}

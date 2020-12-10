@@ -99,11 +99,9 @@ body {
 }
 @media (max-width: 1680px) {
   .header-home {
-      height: 200px;
+    height: 200px;
   }
-  
 }
-
 
 .logo {
   float: left;
@@ -156,17 +154,15 @@ header nav ul li a {
   color: rgb(173, 169, 169);
 }
 
-  
-  .room-detail {
+.room-detail {
   /* padding-left: 1em; */
   height: 80%;
- 
 }
 
 .main-img img {
   margin-top: 2em;
   width: 500px;
-  
+
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
@@ -175,34 +171,27 @@ header nav ul li a {
   .main-img img {
     width: 300px;
   }
- html{
+  html {
     font-size: 1.5em;
   }
-
-  
-  
 }
 
 @media (max-width: 600px) {
-  html{
+  html {
     font-size: 1em;
   }
-  
 
   .main-img img {
     width: 250px;
   }
-  
+
   .card {
     padding: 10px;
     height: 190px;
     width: 270px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
-   
   }
-
-
 }
 
 .main-img img:hover {
@@ -230,11 +219,10 @@ header nav ul li a {
   width: 270px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  margin:10px;
+  margin: 10px;
 }
 
 @media (max-width: 1400px) {
-
   .rl-images-grid img {
     height: 110px;
     width: 170px;
@@ -242,12 +230,10 @@ header nav ul li a {
   .card {
     height: 130px;
     width: 190px;
-   
   }
 }
 
 @media (max-width: 600px) {
-
   .rl-images-grid img {
     height: 200px;
     width: 250px;
@@ -255,11 +241,8 @@ header nav ul li a {
   .card {
     height: 190px;
     width: 270px;
-    
   }
 }
-
-
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -321,8 +304,8 @@ header nav ul li a {
 
 .myicon-bed {
   width: 50px;
-  margin:0.2em;
-  
+  margin: 0.2em;
+
   /* padding-left: 0.5em;  */
 }
 
@@ -336,6 +319,7 @@ header nav ul li a {
 }
 
 .room-features {
+  display: inline-block;
   padding: 20px;
 }
 
@@ -343,13 +327,14 @@ header nav ul li a {
   display: inline-flex;
   padding-bottom: 20px;
   color: #000;
+  margin-right: 2em;
 }
 
-.feature-1 h3 {
-  font-size: 1em;
+.feature-1 h4 {
+  font-size: 1.5em;
 }
 .feature-1 p {
-  font-size: 0.9em;
+  font-size: 1.2em;
 }
 
 .description {
@@ -393,7 +378,6 @@ header nav ul li a {
 }
 .sleeping-text h4 {
   padding-left: 10px;
-
 }
 .sleeping-arrangements {
   color: #000;
@@ -405,7 +389,6 @@ header nav ul li a {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
-
 
 .sleeping-text p {
   font-size: 1.2em;
@@ -426,7 +409,7 @@ header nav ul li a {
 
 .arrangements-h4 {
   padding-top: 15px;
-  padding-bottom:10px;
+  padding-bottom: 10px;
   color: #000;
 }
 
@@ -456,72 +439,65 @@ header nav ul li a {
   font-size: 0.8em;
 }
 
+@media screen and (max-width: 1400px) {
+  .room-division-2 {
+    width: 100%;
+    margin: auto;
+    border-bottom: rgb(155, 154, 154) solid 1px;
+    height: 4.8em;
+  }
+  .room-information {
+    height: 70em;
+  }
+  .sleeping-text p {
+    font-size: 0.8em;
+  }
 
-@media screen and (max-width: 1400px)   {
-.room-division-2 {
-  width: 100%;
-  margin: auto;
-  border-bottom: rgb(155, 154, 154) solid 1px;
-  height: 4.8em;
-}
-.room-information{
-  height: 70em;
-}
-.sleeping-text p {
-  font-size: 0.8em;
-}
-
-.sleeping-text h4 {
-  margin: 0;
-  font-size: 0.8em;
-}
-
-
-
+  .sleeping-text h4 {
+    margin: 0;
+    font-size: 0.8em;
+  }
 }
 
-@media screen and (max-width: 1025px)   {
-  .information-container, .room-details-left{
-    width:100%;   
-    float:none;
-    margin:0;
-    padding:0.5em;
-}
-.room-information {
-  /* padding-left: 4em; */
-  height: 100em;
-}
+@media screen and (max-width: 1025px) {
+  .information-container,
+  .room-details-left {
+    width: 100%;
+    float: none;
+    margin: 0;
+    padding: 0.5em;
+  }
+  .room-information {
+    /* padding-left: 4em; */
+    height: 100em;
+  }
 
+  .information-container {
+    display: inline-block;
+    margin: auto;
+  }
 
-.information-container{
-  display:inline-block;
-  margin: auto;
-}
-
-  .room-information{
+  .room-information {
     height: 70em;
   }
 
   .room-amenities-grid {
-    padding-left:1em;
+    padding-left: 1em;
     padding-top: 1em;
     display: grid;
     grid-template-columns: repeat(2, 300px);
     grid-template-rows: repeat(5, 50px);
     grid-gap: 0.2em 3em;
   }
-
-
-
 }
 
-
-@media screen and (max-width: 692px)   {
-  .information-container, .room-details-left{
-      width:100%;   
-      float:none;
-      margin:0;
-      padding:0.5em;
+@media screen and (max-width: 692px) {
+  .information-container,
+  .room-details-left {
+    width: 100%;
+    float: none;
+    margin: 0;
+    padding: 0.5em;
   }
   .room-information {
     /* padding-left: 4em; */
@@ -535,40 +511,33 @@ header nav ul li a {
     grid-template-rows: repeat(5, 50px);
     grid-gap: 0.2em 3em;
   }
-  
-  .information-container{
-    display:inline-block;
-    margin: auto;
 
+  .information-container {
+    display: inline-block;
+    margin: auto;
   }
   .sleeping-text p {
     font-size: 1.2em;
   }
-  
+
   .sleeping-text h4 {
     margin: 0;
     font-size: 1.2em;
   }
 }
-  @media screen and (max-width: 569px)   {
-   
-  
-    .room-amenities-grid {
-      padding-top: 25px;
-      display: grid;
-      grid-template-columns: repeat(2, 70px);
-      grid-template-rows: repeat(5, 25px);
-      grid-gap: 0.2em 3em;
-    }
-    
-    .room-information{
-      height: 105em;
-    }
+@media screen and (max-width: 569px) {
+  .room-amenities-grid {
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 70px);
+    grid-template-rows: repeat(5, 25px);
+    grid-gap: 0.2em 3em;
+  }
 
-
-
+  .room-information {
+    height: 105em;
+  }
 }
-
 
 /* BOOK NOW FORM */
 

@@ -18,17 +18,24 @@
     <title>Looking for a place to stay? - Earthbnb</title>
   </head>
   <body>
-    <div class="container.fluid">
+    <div class="container-fluid px-0">
       <header class="header-home">
-        {{> header}}
+        {{> header data}}
       </header>
 
       <main>
+        <div class= "mx-auto test">
+        <h2 > BnB {{booking.bnbName}} </h2>
+          <h4 > Total: ${{booking.bnbPrice}} CAD</h2>
+          <h4> With {{booking.guests}} guests</h2>
+           <h4>For {{booking.Days}} days!</h2>
+        </div>
         <div class="payment-form ">
           <div class="cc-payment-form ">
             <div class="cc-payment-form-container ">
+              
               <h2>Credit Card Information</h2>
-              <form action="/thanks">
+              <form action="/thanks" method="post">
                 <div class="form-cc-name">
                   <label for="fullname">Name on Card:</label>
                   <input
@@ -51,7 +58,7 @@
                     id="cc-number"
                     name="cc-number"
                     placeholder="Card number"
-                    pattern="[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}"
+                    {{!-- pattern="[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}" --}}
                     title="Wrong credit card number"
                     required
                     size="12"
@@ -88,6 +95,63 @@
                     class="form-control"
                   />
                 </div>
+                
+
+                <input
+                    type="hidden"
+                    id="fname"
+                    name="fname"
+                    value="{{booking.fname}}"
+                  />
+                
+                 <input
+                    type="hidden"
+                    id="lname"
+                    name="lname"
+                    value="{{booking.lname}}"
+                  />
+                
+                <input
+                    type="hidden"
+                    id="email"
+                    name="email"
+                    value="{{booking.email}}"
+                  />
+                
+                <input
+                    type="hidden"
+                    id="Days"
+                    name="Days"
+                    value="{{booking.Days}}"
+                  />
+                
+
+                <input
+                    type="hidden"
+                    id="bnbName"
+                    name="bnbName"
+                    value="{{booking.bnbName}}"
+                  />
+            
+                <input
+                    type="hidden"
+                    id="bnbPrice"
+                    name="bnbPrice"
+                    value="{{booking.bnbPrice}}"
+                  />
+               
+                  <input
+                    type="hidden"
+                    id="guests"
+                    name="guests"
+                    value="{{booking.guests}}"
+                  />
+              
+
+
+
+
+
 
                 <input type="submit" value="Pay Now!" />
               </form>

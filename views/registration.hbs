@@ -20,12 +20,24 @@
   <body>
     <div class="container.fluid p-0">
       <header class="header-home">
-        {{> header}}
-
+        {{> header data}}
+      
         <div class="ref-position">
           <div class="reg-form mx-auto text-center">
             <h2>Sign in</h2>
-            <form method="post" action="/dashboard" enctype="application/x-www-form-urlencoded" >
+            
+            {{#if data}}
+              <h2>You are already Registered!</h2>
+              <h5>Visit your <a href="/dashboard">Dashboard</a></h5>
+            {{else}}
+            
+            {{#if error}}
+
+                <p class="alert alert-danger">{{error}}</p>
+
+
+                {{/if}}
+            <form method="post" action="/registration" enctype="application/x-www-form-urlencoded" >
               <div class="form-email">
                 <label for="email">Email:</label>
                 <input
@@ -40,21 +52,6 @@
                   class="form-control"
                 />
               </div>
-
-              {{!-- <div class="form-pwd">
-                <label for="password">:</label>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  placeholder="Your password here"
-                  required
-                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                  size="25"
-                   title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
-                  class="form-control"
-                />
-              </div> --}}
 
                 <div class="form-pwd">
                 <label for="password">Password:</label>
@@ -72,9 +69,9 @@
               </div>
 
               <div class="form-renter-owner">
-                <label for="renter-owner">Renter or Owner:</label>
-                <select id="renter-owner" name="renter-owner" required class="form-control">
-                  <option value="" disabled selected hidden>
+                <label for="status">Renter or Owner:</label>
+                <select id="status" name="status" required class="form-control">
+                  <option value="Renter" disabled selected hidden>
                     What are you?
                   </option>
                   <option value="Renter">Renter</option>
@@ -119,18 +116,42 @@
                   type="date"
                   id="birthday"
                   name="birthday"
-                  value="2020-09-19"
+                  {{!-- value="2020-09-19" --}}
                   min="1940-01-01"
-                  max=""
+                  max="2002-12-31"
                   required
                   class="form-control"
                 />
               </div>
-
             
+            <input
+                  type="hidden"
+                  id="isAdm"
+                  name="isAdm"
+                  value="false"
+                />
+             
 
               <input type="submit" value="Register!"/>
+
             </form>
+                 {{/if}}
+                 {{!-- CSS THIS --}}
+              
+
+                {{!-- CSS THIS --}}
+              {{#if data.errors}}
+              <section class="errors">
+                  <ul>
+                    {{#each data.errors}} 
+                    <li>{{msg}}</li>
+                    {{/each}}
+                  </ul>
+                     
+              </section>
+              {{/if}}
+
+              
           </div>
         </div>
       </header>

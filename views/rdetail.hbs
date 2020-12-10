@@ -20,21 +20,20 @@
   <body>
     
       <header class="header-home">
-        {{> header}}
+        {{> header data}}
         
       </header>
      <div class="container-fluid p-0">
       <main>
         <div class="room-title text-center">
           <div class="main-title">
-            <h3>Yonge Loft with Patio! - $130 CAD/night</h3>
+            <h3>{{info.name}} - ${{info.price}} CAD/night</h3>
           </div>
           <div class="room-title-details">
             <p>
               4.75<span class="grey-span"> (233)</span>
               <img src="../assets/icons/star.svg" alt="Star icon"/> -
-              <img src="../assets/icons/like-blue.svg" alt="Like icon" /> Megahost - Toronto,
-              Canada
+              <img src="../assets/icons/like-blue.svg" alt="Like icon" /> Megahost - {{info.location}}
             </p>
           </div>
         </div>
@@ -47,53 +46,13 @@
               <div class="col text-center">
                 <div class="main-img ">
                   <img
-                    src="../assets/roomdetail/taylor-simpson-6JGJjb49PqA-unsplash.jpg"
+                    src="../public/photos/{{info.photoid}}"
                     alt="Main room image"
                   />
                 </div>
               </div>
-              <div class="col align-self-center " style="padding-left:0;">
-                <div class="rl-images-grid ">
 
-                  <div class="container-fluid ">
-                    <div class="row mx-auto ">
-                      <div class="col-sm-6 text-center mx-auto " style="padding-left:0;">
-                        <div class="card">
-                          <img
-                            src="../assets/roomlisting/3-nathan-van-egmond-CXpK83c6Y1M-unsplash-resize.jpg"
-                            alt="Room interior 01"
-                           
-                          />
-                        </div>
-                      </div>
-                      <div class="col-sm-6 text-center" style="padding-left:0;">
-                        <div class="card">
-                          <img
-                            src="../assets/roomlisting/4-noah-benjamin-0r-HGemZdH8-unsplash-resize.jpg"
-                            alt="Room interior 02"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                      <div class="row ">
-                        <div class="col-sm-6 text-center" style="padding-left:0;">
-                          <div class="card">
-                            <img
-                              src="../assets/roomlisting/5-ryan-chu-TCkoheekBw8-unsplash-resize.jpg"
-                              alt="Room interior 03"
-                            />
-                          </div>
-              
-                        </div>
-                        <div class="col-sm-6 text-center" style="padding-left:0;">
-                          <div class="card">
-                            <img
-                              src="../assets/roomlisting/6-sidekix-media-r_y2VBvEOIE-unsplash-resize.jpg"
-                              alt="Room interior 04"
-                            />
-                          </div>
-                        </div>
-                      </div>
+              <div class 
                       </div>
                 </div>
               </div>
@@ -107,8 +66,8 @@
           <div class="information-container">
 
             <div class="apartment-details">
-              <h4>Entire apartment hosted by Gustavo</h4>
-              <p>4 guests - 2 bedrooms - 2 beds - 1 bath</p>
+              <h4>Entire apartment hosted by {{info.hostedby}}</h4>
+              <p>{{info.bnbdetails}}</p>
             </div>
 
             <div class="owner-pic">
@@ -122,32 +81,32 @@
               <div class="feature-1">
                 <img class="icon" src="../assets/icons/house.svg" alt="House icon"/>
                 <div class="description">
-                  <h4>Entire Home</h4>
-                  <p>You'll have the entire apartment for yourself</p>
+                  <h4>{{info.feature0}}</h4>
+                  <p>{{info.feature0desc}}</p>
                 </div>
               </div>
 
               <div class="feature-1">
                 <img class="icon-clean" src="../assets/icons/clean.svg" alt="Clean icon" />
                 <div class="description">
-                  <h4>Clean and tidy</h4>
-                  <p>Recent guests said this place is super clean.</p>
+                  <h4>{{info.feature1}}</h4>
+                  <p>{{info.feature1desc}}</p>
                 </div>
               </div>
 
               <div class="feature-1">
                 <img class="icon" src="../assets/icons/like-black.svg" alt="Megahost icon"/>
                 <div class="description">
-                  <h4>Gustavo is a Megahost</h4>
-                  <p>Megahosts are the best rated hosts.</p>
+                  <h4>{{info.feature2}}</h4>
+                  <p>{{info.feature2desc}}</p>
                 </div>
               </div>
 
               <div class="feature-1">
                 <img class="icon" src="../assets/icons/calander.svg" alt="Calendar icon"/>
                 <div class="description">
-                  <h4>Cancellation policy</h4>
-                  <p>Cancel before 12:00 PM on Oct. 7 and get 100% refund.</p>
+                  <h4>{{info.feature3}}</h4>
+                  <p>{{info.feature3desc}}</p>
                 </div>
               </div>
 
@@ -155,12 +114,7 @@
 
               <div class="room-details-text">
                 <p>
-                  Full Loft with Patio guesthouse very close to downtown Yonge &
-                  Eglinton. Warm, cozy and spacious, beautifully furnished and
-                  in excellent location. A 5 minute walk to TTC subway and
-                  buses, shopping mall and groceries. Private entrance and lock,
-                  1 bedroom with King, shower bathroom, large kitchen, barbecue
-                  on the balcony.
+                 {{info.maindescription}}
                 </p>
               </div>
               <!-- <div class="room-division-4"></div> -->
@@ -214,52 +168,52 @@
               <div class="room-amenities-grid">
                 <div class="amenities-1">
                   <img class="icon-check" src="../assets/icons/check.svg"  alt="Check icon"/>
-                  <p>Hangers</p>
+                  <p>{{info.amenities0}}</p>
                 </div>
 
                 <div class="amenities-1">
                   <img class="icon-check" src="../assets/icons/check.svg" alt="Check icon"/>
-                  <p>Carbon monoxide alarm</p>
+                  <p>{{info.amenities1}}</p>
                 </div>
 
                 <div class="amenities-1">
                   <img class="icon-check" src="../assets/icons/check.svg" alt="Check icon" />
-                  <p>Heating</p>
+                  <p>{{info.amenities2}}</p>
                 </div>
 
                 <div class="amenities-1">
                   <img class="icon-check" src="../assets/icons/check.svg" alt="Check icon" />
-                  <p>Washer</p>
+                  <p>{{info.amenities3}}</p>
                 </div>
 
                 <div class="amenities-1">
                   <img class="icon-check" src="../assets/icons/check.svg" alt="Check icon" />
-                  <p>Indoor fireplace</p>
+                  <p>{{info.amenities4}}</p>
                 </div>
 
                 <div class="amenities-1">
                   <img class="icon-check" src="../assets/icons/check.svg" alt="Check icon" />
-                  <p>Private entrance</p>
+                  <p>{{info.amenities5}}</p>
                 </div>
 
                 <div class="amenities-1">
                   <img class="icon-check" src="../assets/icons/check.svg" alt="Check icon" />
-                  <p>Wifi</p>
+                  <p>{{info.amenities6}}</p>
                 </div>
 
                 <div class="amenities-1">
                   <img class="icon-check" src="../assets/icons/check.svg" alt="Check icon" />
-                  <p>Laptop-friendly workspace</p>
+                  <p>{{info.amenities7}}</p>
                 </div>
 
                 <div class="amenities-1">
                   <img class="icon-check" src="../assets/icons/check.svg" alt="Check icon" />
-                  <p>Iron</p>
+                  <p>{{info.amenities8}}</p>
                 </div>
 
                 <div class="amenities-1">
                   <img class="icon-check" src="../assets/icons/check.svg" alt="Check icon" />
-                  <p>Fire extinguisher</p>
+                  <p>{{info.amenities9}}</p>
                 </div>
               </div>
             </div>
@@ -267,10 +221,10 @@
         </div>
         <div class="booking-form">
           <h2>Confirm the Date</h2>
-          <form action="/payment">
+          <form action="/payment/{{info.name}}" method="post">
             <div class="form-guests">
               <label for="guests">GUESTS:</label>
-              <select id="guests" name="guests" class="form-control">
+              <select id="guests" name="guests" class="form-control" type="Number">
                 <option value="1">1 guest</option>
                 <option value="2">2 guests</option>
                 <option value="3">3 guests</option>
@@ -279,13 +233,13 @@
             </div>
 
             <div class="form-check-in">
-              <label for="check-in">CHECK-IN:</label>
+              <label for="checkin">CHECK-IN:</label>
 
               <input
                 type="date"
-                id="check-in"
-                name="check-in"
-                value="2020-09-19"
+                id="checkin"
+                name="checkin"
+                
                 min="2020-09-19"
                 max="2021-12-31"
                 class="form-control"
@@ -293,13 +247,13 @@
             </div>
 
             <div class="form-check-out">
-              <label for="check-out">CHECK-OUT:</label>
+              <label for="checkout">CHECK-OUT:</label>
 
               <input
                 type="date"
-                id="check-out"
-                name="check-out"
-                value="2020-09-19"
+                id="checkout"
+                name="checkout"
+                
                 min="2020-09-19"
                 max="2022-12-31"
                 class="form-control"

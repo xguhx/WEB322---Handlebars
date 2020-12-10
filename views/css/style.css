@@ -166,7 +166,7 @@ header nav ul li a {
   width: 20em;
   background-color: rgb(241, 239, 239, 0.9);
   border-radius: 30px;
-  margin:2em;
+  margin: 2em;
 }
 
 .booking-form h2 {
@@ -224,24 +224,19 @@ label {
   padding-left: 1em;
 }
 
-
-
 @media screen and (max-width: 1367px) {
-
-  header h1, header p {
-    font-size:1em;
+  header h1,
+  header p {
+    font-size: 1em;
   }
-  
 }
 
 @media screen and (max-width: 980px) {
-
-  header h1, header p {
-    font-size:0em;
+  header h1,
+  header p {
+    font-size: 0em;
   }
-  
 }
-
 
 /*  BANNER */
 
@@ -258,10 +253,7 @@ label {
 }
 .promo-banner h2 {
   font-size: 3em;
-
 }
-
-
 
 .promo-images img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -275,13 +267,13 @@ main {
   display: block;
 }
 
-/* MAKE EM */
+/* ABOUT US */
 .main-info {
   background-color: rgb(29, 28, 28);
   height: 80%;
   padding: 1.5em;
+  color: #fff;
 }
-
 
 .main-info-img img {
   max-width: 300px;
@@ -394,68 +386,54 @@ main {
   margin: auto;
 }
 
-
 @media screen and (max-width: 1025px) {
-  
   .booking-form {
-    margin-top:2em;
-     height: 26em;
-     margin-right: 2em;
-   
-    }
+    margin-top: 2em;
+    height: 26em;
+    margin-right: 2em;
+  }
 
   .social-media img {
     width: 25%;
     padding-right: 1em;
   }
-
-  
-
- } 
-
- @media screen and (max-width: 813px) {
-  
- .booking-form {
-
-  float: right;
-  margin:2em;
 }
 
- }
-
- 
- @media screen and (max-width: 569px) {
-  
+@media screen and (max-width: 813px) {
   .booking-form {
- font-size: 0.7em;
-  height: 38em;
-  margin:0;
-  margin-right: 2em;
-
- }
-
- .booking-form h2 {
-  padding-top: 0.3em;
-  padding-left: 2em;
-  margin-bottom: 0.3em;
-  font-size:2em;
-}
-
-input[type="submit"] {
-  
-  font-size: 0.7em;
-}
-
-.form-guests {
-  padding: 1em;
-}
-
-.main-info-text {
-  color: #fff;
-  width: 100%;
-  max-width: 100%;
-  padding: 0em;
-  padding-left: 0;
-}
- 
+    float: right;
+    margin: 2em;
   }
+}
+
+@media screen and (max-width: 569px) {
+  .booking-form {
+    font-size: 0.7em;
+    height: 38em;
+    margin: 0;
+    margin-right: 2em;
+  }
+
+  .booking-form h2 {
+    padding-top: 0.3em;
+    padding-left: 2em;
+    margin-bottom: 0.3em;
+    font-size: 2em;
+  }
+
+  input[type="submit"] {
+    font-size: 1.3em;
+  }
+
+  .form-guests {
+    padding: 1em;
+  }
+
+  .main-info-text {
+    color: #fff;
+    width: 100%;
+    max-width: 100%;
+    padding: 0em;
+    padding-left: 0;
+  }
+}

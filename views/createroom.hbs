@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- SCRIPT, META, LINK (JS, CSS) -->
+     <!-- SCRIPT, META, LINK (JS, CSS) -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+   <!-- MY CSS -->
+   <link rel="stylesheet" href="../css/style-roomcreate.css" />
+   <!-- GOOGLE FONTS -->
+   <link
+     href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap"
+     rel="stylesheet"
+   />
+   <!-- BOOSTRAP -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Looking for a place to stay? - Earthbnb</title>
+  </head>
+  <body>
+    <div class="container.fluid">
+      <header class="header-home">
+        {{> header data}}
+      </header>
+
+      <main>
+          <!-- <h3>Your order has been processed!</h3> -->
+         
+          <div class="form-group  ">
+            {{#if msg}}
+            <h4 class="alert alert-success">{{msg}}</h4>
+            {{/if}}
+            {{#if error}}
+            <h4 class="alert alert-danger">{{error}}</h4>
+            {{/if}}
+             <form method="post" action="/createroom" enctype="multipart/form-data" >
+             {{#if editMode}}
+           <h4>EDIT THE ROOM "{{room.name}}"</h4><br/>
+           
+                <input
+                  type="hidden"
+                  id="name"
+                  name="name"
+                  class="form-control"
+                  value="{{room.name}}"
+                />
+                <input
+                  type="hidden"
+                  id="edit"
+                  name="edit"
+                 
+                  class="form-control"
+                  value="1"
+                />
+                  {{else}}
+              <input
+                  type="hidden"
+                  id="edit"
+                  name="edit"
+                 
+                  class="form-control"
+                  value="0"
+                />
+      
+            <h4>CREATE NEW ROOM</h4><br/>
+             <form method="post" action="/createroom" enctype="multipart/form-data" >
+              <div class=" name">
+                <label for=" name">BnB Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  {{!-- placeholder="Your email here" --}}
+                  required
+                  class="form-control"
+                 
+                />
+                </div>
+                {{/if}}
+      
+              
+              <div class=" price">
+                <label for="price">Price:</label>
+                <input
+                  type="Number"
+                  id="price"
+                  name="price"
+                  {{!-- placeholder="Your email here" --}}
+                  required
+                  class="form-control"
+                  value="{{room.price}}"
+                />
+              </div>
+
+              <div class="location">
+                <label for="location">Location:</label>
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  {{!-- placeholder="Your password" --}}
+                  required
+                  class="form-control"
+                  value="{{room.location}}"
+                />
+                </div>
+                <div class="hostedby">
+                <label for="hostedby">Hosted By:</label>
+                <input
+                  type="text"
+                  id="hostedby"
+                  name="hostedby"
+                  placeholder="Entire apartment hosted by: "
+                  required
+                  class="form-control"
+                  value="{{room.hostedby}}"
+                />
+                </div>
+
+                 <div class="bnbdetails">
+                <label for="bnbdetails">BnB details:</label>
+                <input
+                  type="text"
+                  id="bnbdetails"
+                  name="bnbdetails"
+                  placeholder="How many guests can it fit? How many rooms? "
+                  
+                  class="form-control"
+                  value="{{room.bnbdetails}}"
+                />
+                </div>
+
+
+               
+                 <div class="feature0">
+                <label for="feature0">Bnb Feature:</label>
+                <input
+                  type="text"
+                  id="feature0"
+                  name="feature0"
+                  {{!-- placeholder="First BnB Feature: " --}}
+                 
+                  class="form-control"
+                  value="{{room.feature0}}"
+                />
+                </div>
+
+                <div class="feature0desc">
+                <label for="feature0desc">Description of the Feature:</label>
+                <input
+                  type="text"
+                  id="feature0desc"
+                  name="feature0desc"
+                  {{!-- placeholder="First BnB Feature: " --}}
+                  
+                  class="form-control"
+                  value="{{room.feature0desc}}"
+                />
+                </div>
+
+                <div class="feature1">
+                <label for="feature1">Next Bnb Feature:</label>
+                <input
+                  type="text"
+                  id="feature1"
+                  name="feature1"
+                  {{!-- placeholder="First BnB Feature: " --}}
+                
+                  class="form-control"
+                  value="{{room.feature1}}"
+                />
+                </div>
+
+                <div class="feature1desc">
+                <label for="feature1desc">Next Description of the Feature:</label>
+                <input
+                  type="text"
+                  id="feature1desc"
+                  name="feature1desc"
+                  {{!-- placeholder="First BnB Feature: " --}}
+                  value="{{room.feature1desc}}"
+                  class="form-control"
+                />
+                </div>
+
+                <div class="feature2">
+                <label for="feature2">Next Bnb Feature:</label>
+                <input
+                  type="text"
+                  id="feature2"
+                  name="feature2"
+                  {{!-- placeholder="First BnB Feature: " --}}
+                  value="{{room.feature2}}"
+                  class="form-control"
+                />
+                </div>
+
+                <div class="feature2desc">
+                <label for="feature2desc">Next Description of the Feature:</label>
+                <input
+                  type="text"
+                  id="feature2desc"
+                  name="feature2desc"
+                  {{!-- placeholder="First BnB Feature: " --}}
+               value="{{room.feature2desc}}"
+                  class="form-control"
+                />
+                </div>
+
+
+                <div class="feature3">
+                <label for="feature3">Next Bnb Feature:</label>
+                <input
+                  type="text"
+                  id="feature3"
+                  name="feature3"
+                  {{!-- placeholder="First BnB Feature: " --}}
+                 value="{{room.feature3}}"
+                  class="form-control"
+                />
+                </div>
+
+                <div class="feature3desc">
+                <label for="feature3desc">Next Description of the Feature:</label>
+                <input
+                  type="text"
+                  id="feature3desc"
+                  name="feature3desc"
+                  {{!-- placeholder="First BnB Feature: " --}}
+                  required
+                  class="form-control"
+                  value="{{room.feature3desc}}"
+                />
+                </div>
+   
+                <div class="maindescription">
+                <label for="maindescription">Main Description:</label>
+                <input
+                  type="text" id="maindescription" name="maindescription" value="{{room.maindescription}}" class="form-control"/>
+                  
+                </textarea>
+                </div>
+                  <div>
+                <label for="amenities0">Amenities:</label>
+                <input
+                  type="text"
+                  id="amenities0"
+                  name="amenities0"
+                  {{!-- placeholder="First BnB Feature: " --}}
+                  value="{{room.amenities0}}"
+                  class="form-control"
+                />
+                </div>
+                 
+                  <div>
+                 <label for="amenities1">Next Amenities:</label>
+                <input
+                  type="text"
+                  id="amenities1"
+                  name="amenities1"
+                  {{!-- placeholder="First BnB Feature: " --}}
+                 value="{{room.amenities1}}"
+                  class="form-control"
+                />
+                </div>
+
+                 <div>
+                 <label for="amenities2">Next Amenities:</label>
+                <input
+                  type="text"
+                  id="amenities2"
+                  name="amenities2"
+                  {{!-- placeholder="First BnB Feature: " --}}
+                value="{{room.amenities2}}"
+                  class="form-control"
+                />
+                </div>
+
+                <div>
+                 <label for="amenities3">Next Amenities:</label>
+                <input
+                  type="text"
+                  id="amenities3"
+                  name="amenities3"
+                  {{!-- placeholder="First BnB Feature: " --}}
+                  value="{{room.amenities3}}"
+                  class="form-control"
+                />
+                </div>
+
+                  <div>
+                 <label for="amenities4">Next Amenities:</label>
+                <input
+                  type="text"
+                  id="amenities4"
+                  name="amenities4"
+                  {{!-- placeholder="First BnB Feature: " --}}
+                 value="{{room.amenities4}}"
+                  class="form-control"
+                />
+                </div>
+
+                <div>
+                 <label for="amenities5">Next Amenities:</label>
+                <input
+                  type="text"
+                  id="amenities5"
+                  name="amenities5"
+                  {{!-- placeholder="First BnB Feature: " --}}
+                 value="{{room.amenities5}}"
+                  class="form-control"
+                />
+                </div>
+
+                <div>
+                 <label for="amenities6">Next Amenities:</label>
+                <input
+                  type="text"
+                  id="amenities6"
+                  name="amenities6"
+                  {{!-- placeholder="First BnB Feature: " --}}
+                value="{{room.amenities6}}"
+                  class="form-control"
+                />
+                </div>
+
+                 <div>
+                 <label for="amenities7">Next Amenities:</label>
+                <input
+                  type="text"
+                  id="amenities7"
+                  name="amenities7"
+                  {{!-- placeholder="First BnB Feature: " --}}
+                  value="{{room.amenities7}}"
+                  class="form-control"
+                />
+                </div>
+
+
+                 <div>
+                 <label for="amenities8">Next Amenities:</label>
+                <input
+                  type="text"
+                  id="amenities8"
+                  name="amenities8"
+                  {{!-- placeholder="First BnB Feature: " --}}
+                 value="{{room.amenities8}}"
+                  class="form-control"
+                />
+                </div>
+
+                 <div>
+                 <label for="amenities9">Next Amenities:</label>
+                <input
+                  type="text"
+                  id="amenities9"
+                  name="amenities9"
+                  {{!-- placeholder="First BnB Feature: " --}}
+                 value="{{room.amenities9}}"
+                  class="form-control"
+                />
+                </div>
+                
+                  <div>
+                <label for="photo">Room Photo:</label>
+                <br />
+                <input id="photo" type="file" name="photo" required><br />
+                </div>
+              
+                <br/>
+
+              <input type="submit" value="Save Room!" class="btn btn-primary"/>
+            </form>
+</div>
+
+        </div>
+      </main>
+      {{> whitefooter}}
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"
+  ></script>
+  </body>
+</html>

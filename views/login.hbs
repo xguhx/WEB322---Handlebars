@@ -20,16 +20,50 @@
   <body>
     <div class="container-fluid p-0">
         <header class="header-home">
-      {{> header}}
+      {{> header data}}
       <div container class="mx-auto text-center">
         <div class="ref-position ">
           <div class="login-form mx-auto">
             <h2>Log in</h2>
-            <form action="/home">
+                 {{#if data}}
+              <h2>You are already Logged In!</h2>
+              <h5>Visit your <a href="/dashboard">Dashboard</a></h5>
+                 {{else}}
+
+
+
+                  {{!-- CSS THIS --}}
+                     {{#if success}}
+
+                <p class="alert alert-success">{{success}}</p>
+
+                {{/if}}
+
+
+
+                 {{#if error}}
+
+                <p class="alert alert-danger">{{error}}</p>
+
+                {{/if}}
+
+             {{!-- CSS THIS --}}
+              {{#if errors.errors}}
+              <section class="errors">
+                  <ul>
+                    {{#each errors.errors}} 
+                    <li class="alert alert-danger">{{msg}}</li>
+                    {{/each}}
+                  </ul>
+                     
+              </section>
+              {{/if}}
+
+            <form method="post" action="/login" enctype="application/x-www-form-urlencoded" >
               <div class="form-email">
                 <label for="email">Email:</label>
                 <input
-                  type="email"
+                  {{!-- type="email" --}}
                   id="email"
                   name="email"
                   placeholder="Your email here"
@@ -53,8 +87,9 @@
           </div>
         </div>
       </div>
+      {{/if}}
       </header>
-
+        
      {{> blackfooter}}
     </div>
     <script

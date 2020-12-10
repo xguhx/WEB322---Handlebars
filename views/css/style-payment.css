@@ -100,9 +100,8 @@ body {
 
 @media (max-width: 1680px) {
   .header-home {
-      height: 200px;
+    height: 200px;
   }
-  
 }
 
 .logo {
@@ -281,3 +280,7 @@ label {
     font-size: 3em;
   }
 } */
+
+.test {
+  width: 250px;
+}

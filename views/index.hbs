@@ -36,13 +36,23 @@
           <div
             class="navbar navbar-expand-lg navbar-light bg-transparent nav-reg float-right"
           >
+
+
             <nav>
               <ul>
                 <li><a href="/home"> Home </a></li>
+                    {{#if data}}
+                          <li><a href="/dashboard"> Dashboard</a></li>
+                          <li><a href="/logout"> Log Out</a></li>
+                    {{else}}
                 <li><a href="/registration"> User Registration</a></li>
                 <li><a href="/login"> Log in</a></li>
+                   {{/if}}
               </ul>
             </nav>
+
+
+
             <div class="registration"></div>
           </div>
         </div>
@@ -56,11 +66,11 @@
 
         <div class="booking-form">
           <h2>Where do you want to stay?</h2>
-          <form action="/rooms">
+          <form action="/rooms" method="post">
             
              <div class="form-guests">
               <label for="guests">GUESTS:</label>
-              <select id="guests" name="guests" class="form-control">
+              <select id="guests" name="guests" class="form-control" required>
                 <option value="1">1 guest</option>
                 <option value="2">2 guests</option>
                 <option value="3">3 guests</option>
@@ -71,11 +81,12 @@
             
             
             <div class="form-city">
-              <label for="places">PLACE:</label>
-              <select id="places" name="place" class="form-control">
+              <label for="location">PLACE:</label>
+              <select id="location" name="location" class="form-control" required>
                 <option value="" disabled selected hidden>
                   Choose a City...
                 </option>
+                <option value="All">All</option>
                 <option value="Toronto">Toronto</option>
                 <option value="Vancouver">Vancouver</option>
                 <option value="Quebec City">Quebec City</option>
@@ -128,7 +139,7 @@
             <div class="container text-center">
               <div class="row">
                 <div class="col-sm-4 pt-5 d-flex flex-column">
-                  <a href="/roomdetail"
+                  <a href="/rooms"
                     ><img
                       class="img-thumbnail"
                       src="../assets/banner/Alaska.PNG"
@@ -136,7 +147,7 @@
                   /></a>
                 </div>
                 <div class="col-sm-4 pt-5 d-flex flex-column">
-                  <a href="/roomdetail"
+                  <a href="/rooms"
                     ><img
                       class="img-thumbnail"
                       src="../assets/banner/Florida.PNG"
@@ -144,7 +155,7 @@
                   /></a>
                 </div>
                 <div class="col-sm-4 pt-5 d-flex flex-column">
-                  <a href="/roomdetail"
+                  <a href="/rooms"
                     ><img
                       class="img-thumbnail"
                       src="../assets/banner/Norway.PNG"

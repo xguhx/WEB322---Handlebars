@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier": "prettier --write \"src/**/*.{html,js,json,css}\"",
+    "prettier": "prettier --write \"../**/*.{html,js,json,css}\"",
     "start": "node index.js"
   },
   "author": "Gustavo Tavares",
@@ -14,9 +14,17 @@
     "prettier": "2.1.2"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
+    "client-sessions": "^0.8.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
+    "express-validator": "^6.7.0",
+    "fs": "0.0.1-security",
+    "mongoose": "^5.10.13",
+    "multer": "^1.4.2",
     "nodemailer": "^6.4.14"
   }
 }

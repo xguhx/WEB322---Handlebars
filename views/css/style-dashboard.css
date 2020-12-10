@@ -99,9 +99,8 @@ body {
 }
 @media (max-width: 1680px) {
   .header-home {
-      height: 200px;
+    height: 200px;
   }
-  
 }
 
 .logo {
@@ -211,4 +210,3 @@ header nav ul li a {
   width: 120px;
   margin: auto;
 }
-
