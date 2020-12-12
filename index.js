@@ -395,12 +395,11 @@ app.get(
             editMode: true,
           });
         else {
-          roomImport.saveRoom(newRoom, roomImport.roomModel, FORM_DATA); //not saving
           return res.render("createroom", {
             data: req.session.user,
             layout: false,
             error: "Cant edit the room!",
-          }); // pass number of the room from database
+          });
         }
       })
       .catch((err) => {
