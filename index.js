@@ -27,9 +27,8 @@ const adminCheck = require("./models/admin_userCheck.js");
 const app = express();
 
 if (!fs.existsSync(PHOTODIRECTORY)) {
-  fs.mkdir(PHOTODIRECTORY, {recursive: true}, err => {});
+  fs.mkdir(PHOTODIRECTORY, { recursive: true }, (err) => {});
 }
-
 
 //Bcryptjs
 var salt = bcrypt.genSaltSync(10);
@@ -68,7 +67,7 @@ app.use(
   clientSessions({
     cookieName: "session",
     secret: process.env.clientSession_secret,
-    duration: 2* 60 * 1000, //2 minutes
+    duration: 2 * 60 * 1000, //2 minutes
     activeDuration: 1000 * 60, //1 minute
   })
 );
@@ -261,7 +260,7 @@ app.get("/createroom", checkLogin.checkLogin, function (req, res) {
 
 app.post(
   "/createroom",
-  checkLogin.checkLogin,
+   checkLogin.checkLogin,
    adminCheck.adminCheck,
   upload.single("photo"),
   function (req, res) {
@@ -337,7 +336,6 @@ app.post(
               data: req.session.user,
               layout: false,
               msg: "Room updated!!",
-              
             });
           } else {
             return res.render("createroom", {
@@ -350,29 +348,28 @@ app.post(
         .catch((err) => {
           console.log(err);
         }); //then
-    }else{
-
-    roomImport.roomModel
-      .findOne({ name: FORM_DATA.name })
-      .exec()
-      .then((room) => {
-        if (room) {
-          return res.render("createroom", {
-            data: req.session.user,
-            layout: false,
-            error: "There is a Room with this name already!",
-          });
-        } else {
-          roomImport.saveRoom(newRoom, roomImport.roomModel, FORM_DATA); //not saving
-          return res.render("createroom", {
-            data: req.session.user,
-            layout: false,
-            msg: "Room added!",
-          }); // pass number of the room from database
-        }
-      });
+    } else {
+      roomImport.roomModel
+        .findOne({ name: FORM_DATA.name })
+        .exec()
+        .then((room) => {
+          if (room) {
+            return res.render("createroom", {
+              data: req.session.user,
+              layout: false,
+              error: "There is a Room with this name already!",
+            });
+          } else {
+            roomImport.saveRoom(newRoom, roomImport.roomModel, FORM_DATA);
+            return res.render("createroom", {
+              data: req.session.user,
+              layout: false,
+              msg: "Room added!",
+            }); // pass number of the room from database
+          }
+        });
+    }
   }
-}
 );
 
 app.get(
@@ -415,6 +412,23 @@ app.get(
 /*#endregion */
 
 /* #region ROOM LISTING WITH SEARCH*/
+
+app.get("/rooms", function (req, res) {
+  var rooms = roomImport.roomModel
+    .find({})
+    .lean() //lean enables sending it to handlebars
+    .exec()
+    .then((rooms) => {
+        return res.render("roomlisting", {
+          data: req.session.user,
+          hasRooms: !!rooms.length,
+          layout: false,
+          info: rooms,
+        });
+    });
+});
+
+
 app.post("/rooms", function (req, res) {
   //DO SEARCH
 
@@ -424,7 +438,7 @@ app.post("/rooms", function (req, res) {
       .lean() //lean enables sending it to handlebars
       .exec()
       .then((rooms) => {
-        if (rooms) {
+      
           //console.log(rooms);
           return res.render("roomlisting", {
             data: req.session.user,
@@ -432,14 +446,7 @@ app.post("/rooms", function (req, res) {
             layout: false,
             info: rooms,
           });
-        } else {
-          return res.render("roomlisting", {
-            data: req.session.user,
-            layout: false,
-            rooms: roomsArray,
-            hasRooms: !!rooms.length,
-          });
-        }
+      
       });
   } else if (req.body.location) {
     var rooms = roomImport.roomModel
@@ -447,7 +454,7 @@ app.post("/rooms", function (req, res) {
       .lean() //lean enables sending it to handlebars
       .exec()
       .then((rooms) => {
-        if (rooms) {
+        
           //console.log(rooms);
           return res.render("roomlisting", {
             data: req.session.user,
@@ -455,44 +462,12 @@ app.post("/rooms", function (req, res) {
             layout: false,
             info: rooms,
           });
-        } else {
-          return res.render("roomlisting", {
-            data: req.session.user,
-            layout: false,
-            rooms: roomsArray,
-            hasRooms: !!rooms.length,
-            
-          });
-        }
+       
       });
   }
 });
 
-app.get("/rooms", function (req, res) {
 
-    var rooms = roomImport.roomModel
-      .find({})
-      .lean() //lean enables sending it to handlebars
-      .exec()
-      .then((rooms) => {
-        if (rooms) {
-          //console.log(rooms);
-          return res.render("roomlisting", {
-            data: req.session.user,
-            hasRooms: !!rooms.length,
-            layout: false,
-            info: rooms,
-          });
-        } else {
-          return res.render("roomlisting", {
-            data: req.session.user,
-            layout: false,
-            rooms: roomsArray,
-            hasRooms: !!rooms.length,
-          });
-        }
-      });
-});
 /*#endregion */
 
 app.get("/roomdetail/:name", function (req, res) {
