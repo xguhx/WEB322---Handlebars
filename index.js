@@ -375,7 +375,7 @@ app.post(
 app.get(
   "/createroom/:name",
   checkLogin.checkLogin,
-  //adminCheck.adminCheck,
+  adminCheck.adminCheck,
   upload.single("photo"),
   function (req, res) {
     const formFile = req.file; //formFile.filename
@@ -555,7 +555,6 @@ app.post("/payment/:name", checkLogin.checkLogin, function (req, res) {
         guests: FORM_DATA.guests,
       };
 
-      //MAKE A HIDDEN UNPIT WITH NEWBOOKINGS VALUES TO SEND IT TO THANKS - IN THANKS ADD THIS VALUE TO BOOKING DATABASE
 
       res.render("payment", {
         data: req.session.user,
