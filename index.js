@@ -252,7 +252,7 @@ app.get("/dashboard", checkLogin.checkLogin, function (req, res) {
   }
 });
 
-app.get("/createroom", checkLogin.checkLogin, function (req, res) {
+app.get("/createroom", checkLogin.checkLogin,adminCheck.adminCheck, function (req, res) {
   res.render("createroom", { data: req.session.user, layout: false });
 });
 
